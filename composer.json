@@ -1,0 +1,25 @@
+{
+    "name" : "tomsyrovy/contenteditable-bundle",
+    "type" : "symfony-bundle",
+    "description" : "Symfony contenteditable bundle",
+    "keywords" : ["Symfony", "contenteditable"],
+    "homepage" : "https://github.com/tomsyrovy/contenteditable-bundle",
+    "license" : "MIT",
+    "authors" :
+    [
+        {
+            "name" : "Tomas SYROVY",
+            "email" : "tomas@syrovy.pro",
+            "homepage" : "http://syrovy.pro",
+            "role" : "Developer"
+        }
+    ],
+    "minimum-stability" : "beta",
+    "require": {
+        "php": ">=5.5.9",
+    },
+    "autoload": {
+        "psr-0": { "tomsyrovy\\ContentEditableBundle": "" }
+    },
+    "target-dir" : "tomsyrovy\\ContentEditableBundle"
+}
