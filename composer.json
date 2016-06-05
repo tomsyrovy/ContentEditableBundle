@@ -17,6 +17,8 @@
     "minimum-stability" : "beta",
     "require": {
         "php": ">=5.5.9",
+        "symfony/symfony": "v3.0.6",
+        "symfony/framework-bundle": "v3.0.6"
     },
     "autoload": {
         "psr-0": { "tomsyrovy\\ContentEditableBundle": "" }
