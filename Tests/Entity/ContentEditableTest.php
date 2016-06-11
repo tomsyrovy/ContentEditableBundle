@@ -10,6 +10,9 @@
 	namespace tomsyrovy\Tests\Entity;
 
 	use tomsyrovy\ContentEditableBundle\Model\ContentEditableInterface;
+	use tomsyrovy\ContentEditableBundle\Entity\ContentEditable;
+	use tomsyrovy\Repository\ContentEditableRepository;
+	use Doctrine\Common\Persistence\ObjectManager;
 
 	class ContentEditableTest extends \PHPUnit_Framework_TestCase {
 
@@ -39,7 +42,7 @@
 		 */
 		protected function getContentEditable()
 		{
-			return $this->getMock('\tomsyrovy\ContentEditableBundle\Entity\ContentEditable');
+			return $this->getMock(ContentEditable::class);
 		}
 
 	}

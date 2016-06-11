@@ -1,0 +1,21 @@
+{
+  "name": "ContentEditableBundle",
+  "homepage": "https://github.com/tomsyrovy/ContentEditableBundle",
+  "authors": [
+    "Tomas SYROVY <tomas@syrovy.pro>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Resources/public/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hallo": "^1.1.1"
+  }
+}
