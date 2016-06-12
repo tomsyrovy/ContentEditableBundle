@@ -24,7 +24,6 @@
         "phpunit/phpunit": "4.8.*"
     },
     "autoload": {
-        "psr-0": { "tomsyrovy\\ContentEditableBundle": "" }
-    },
-    "target-dir" : "tomsyrovy\\ContentEditableBundle"
+        "psr-0": { "tomsyrovy\\ContentEditableBundle\\": "" }
+    }
 }
