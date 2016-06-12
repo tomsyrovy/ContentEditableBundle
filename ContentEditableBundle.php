@@ -17,4 +17,5 @@
 	 */
 	class ContentEditableBundle extends Bundle{
 
+
 	}

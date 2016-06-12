@@ -23,7 +23,7 @@
 		 * @var integer
 		 *
 		 * @ORM\Id()
-		 * @ORM\GeneratedValue(strategy="auto")
+		 * @ORM\GeneratedValue(strategy="AUTO")
 		 * @ORM\Column(type="integer")
 		 */
 		protected $id;
