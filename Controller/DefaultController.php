@@ -6,15 +6,34 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use tomsyrovy\ContentEditableBundle\Entity\ContentEditable;
-use tomsyrovy\Controller\DefaultControllerInterface;
 
 class DefaultController extends Controller
 {
 
+    public function loadAction(Request $request)
+    {
+
+        $uid = $request->request->get('uid');
+
+        $em = $this->getDoctrine()->getManager();
+
+        $contentEditable = $em->getRepository(ContentEditable::class)->find($uid);
+
+        if($contentEditable){
+            //prepare the response
+            $response = array("status" => 200, "success" => true, 'content' => $contentEditable->getContent());
+        }else{
+            $response = array("status" => 200, "success" => true, 'content' => '');
+        }
+
+        //you can return result as JSON
+        return new JsonResponse($response, 200);
+    }
+
     public function saveAction(Request $request)
     {
 
-        $uid = $request->query->get('uid');
+        $uid = $request->request->get('uid');
 
         $em = $this->getDoctrine()->getManager();
 
@@ -25,7 +44,7 @@ class DefaultController extends Controller
             $contentEditable->setUid($uid);
         }
 
-        $content = $request->query->get('content');
+        $content = $request->request->get('content');
 
         $contentEditable->setContent($content);
 
